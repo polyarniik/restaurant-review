@@ -1,0 +1,17 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <section class="menu">
+        <div class="menu__container container">
+            <h2 class="menu__title title">Меню</h2>
+            {% for dish in dish_list %}
+                <div class="menu__row">
+                    <div class="menu__name">{{ dish.name }}</div>
+                    <div class="menu__composition">{{ dish.recipe }}</div>
+                    <div class="menu__price">{{ dish.price }} руб.</div>
+                    <div class="menu__weight">{{ dish.weight }} г</div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

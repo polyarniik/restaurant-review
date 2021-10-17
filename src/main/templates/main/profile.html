@@ -1,0 +1,43 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <section class="profile">
+        <div class="profile__container container">
+            <div class="profile__wrapper">
+                <div class="profile__left">
+                    <div class="profile__img">
+                        <img src="{{ profile.photo.url }}" alt="">
+                    </div>
+                </div>
+                <div class="profile__right">
+                    <div class="profile__info">
+                        <div class="profile__name">{{ profile.full_name }}</div>
+                        <div class="profile__row">
+                            <div class="profile__key">Пол</div>
+                            <div class="profile__value">
+                                {% if profile.gender %}
+                                    {{ profile.gender }}
+                                {% else %}
+                                    Не указан
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="profile__row">
+                            <div class="profile__key">Город</div>
+                            <div class="profile__value">
+                                {% if profile.city %}
+                                    {{ profile.city }}
+                                {% else %}
+                                    Не указан
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="profile__edit">
+                            <a href="{% url 'main:edit_profile' %}" class="btn btn_outline">Изменить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

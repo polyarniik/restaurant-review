@@ -1,0 +1,57 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <section class="profile">
+        <div class="profile__container container">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="profile__wrapper">
+                    <div class="profile__left">
+                        <div class="profile__img">
+                            <img src="{{ user.profile.photo.url }}" alt="">
+                        </div>
+                        <div class="profile__upload">
+                            <label for="id_photo">
+                                <input type="file" name="photo" accept="image/*" id="id_photo">
+                                <span class="btn btn_outline">Выберите файл</span>
+                                <input type="file">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="profile__right">
+                        <div class="profile__info">
+                            <div class="profile__name">
+                                <input class="profile__input" id="id_full_name" name="full_name" type="text"
+                                       placeholder="{{ user.profile.full_name }}">
+                            </div>
+                            <div class="profile__row">
+                                <div class="profile__key">Пол</div>
+                                <div class="profile__value">
+                                    <select name="gender" class="profile__input" id="id_gender">
+                                        <option value="">Выберите пол</option>
+                                        <option value="m">Мужской</option>
+                                        <option value="f">Женский</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="profile__row">
+                                <div class="profile__key">Город</div>
+                                <div class="profile__value">
+                                    <select name="city" id="id_city" class="profile__input">
+                                        <option value="" selected="">Выберите город</option>
+                                        {% for city in form.fields.city.queryset %}
+                                            <option value="{{ city.id }}">{{ city.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="profile__edit">
+                                <button type="submit" class="btn btn_outline">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}

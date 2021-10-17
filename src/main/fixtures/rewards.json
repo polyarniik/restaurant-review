@@ -1,0 +1,30 @@
+[
+    {
+        "model": "main.Reward",
+        "pk": 1,
+        "fields": {
+            "name": "Пальмовая ветвь"
+        }
+    },
+    {
+        "model": "main.Reward",
+        "pk": 2,
+        "fields": {
+            "name": "Time Out"
+        }
+    },
+    {
+        "model": "main.Reward",
+        "pk": 3,
+        "fields": {
+            "name": "Золотая вилка"
+        }
+    },
+    {
+        "model": "main.Reward",
+        "pk": 4,
+        "fields": {
+            "name": "Мишлен"
+        }
+    }
+]

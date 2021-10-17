@@ -1,0 +1,32 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <main class="main-page">
+        <div class="main-page__container container">
+            <h2 class="title">{{ page_tittle }}</h2>
+            <div class="main-page__list grid">
+                {% for restaurant in restaurant_list %}
+
+                    <div class="main-page__col">
+                        <a href="{% url 'main:restaurant' pk=restaurant.pk %}">
+                            <div class="restaurant-item">
+                                <div class="restaurant-item__image">
+                                    <img src="{{ restaurant.photo.url }}" alt="">
+                                </div>
+                                <div class="restaurant-item__body">
+                                    <div class="restaurant-item__name">{{ restaurant.name }}</div>
+                                    <div class="restaurant-item__phone restaurant-item__row">
+                                        <span>Телефон:</span><span>{{ restaurant.phone }}</span>
+                                    </div>
+                                    <div class="restaurant-item__site restaurant-item__row">
+                                        <span>Сайт:</span><span>{{ restaurant.site }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}

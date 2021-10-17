@@ -1,0 +1,134 @@
+[
+    {
+        "model": "main.Dish",
+        "pk": 1,
+        "fields": {
+            "name": "Летний салат",
+            "weight": 200,
+            "recipe": "огурцы, помидоры",
+            "restaurant": 1,
+            "price": 160
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 2,
+        "fields": {
+            "name": "Хлебная корзина",
+            "weight": 200,
+            "recipe": "багет, бородинский",
+            "restaurant": 1,
+            "price": 80
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 3,
+        "fields": {
+            "name": "Салат 'Цезарь'",
+            "weight": 300,
+            "recipe": "помидоры, курица, соус",
+            "restaurant": 1,
+            "price": 340
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 4,
+        "fields": {
+            "name": "Торт 'Наполеон'",
+            "weight": 350,
+            "recipe": "сахар, мед, мука",
+            "restaurant": 1,
+            "price": 300
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 5,
+        "fields": {
+            "name": "Шаурма",
+            "weight": 500,
+            "recipe": "жареная курица, соус, картошка, лук, помидоры, огурцы",
+            "restaurant": 1,
+            "price": 780
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 6,
+        "fields": {
+            "name": "Суп",
+            "weight": 300,
+            "recipe": "мясо, грибы",
+            "restaurant": 1,
+            "price": 600
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 7,
+        "fields": {
+            "name": "Летний салат",
+            "weight": 200,
+            "recipe": "огурцы, помидоры",
+            "restaurant": 2,
+            "price": 160
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 8,
+        "fields": {
+            "name": "Хлебная корзина",
+            "weight": 200,
+            "recipe": "багет, бородинский",
+            "restaurant": 3,
+            "price": 80
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 9,
+        "fields": {
+            "name": "Салат 'Цезарь'",
+            "weight": 300,
+            "recipe": "помидоры, курица, соус",
+            "restaurant": 4,
+            "price": 340
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 10,
+        "fields": {
+            "name": "Торт 'Наполеон'",
+            "weight": 350,
+            "recipe": "сахар, мед, мука",
+            "restaurant": 5,
+            "price": 300
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 11,
+        "fields": {
+            "name": "Шаурма",
+            "weight": 500,
+            "recipe": "жареная курица, соус, картошка, лук, помидоры, огурцы",
+            "restaurant": 6,
+            "price": 780
+        }
+    },
+    {
+        "model": "main.Dish",
+        "pk": 12,
+        "fields": {
+            "name": "Суп",
+            "weight": 300,
+            "recipe": "мясо, грибы",
+            "restaurant": 2,
+            "price": 600
+        }
+    }
+]

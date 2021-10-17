@@ -1,0 +1,23 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <main class="main-page">
+        <div class="main-page__container container">
+            <h2 class="title">Выберите город</h2>
+            <div class="main-page__list grid">
+                {% for city in city_list %}
+                <div class="main-page__col">
+                    <a href="{% url 'main:main' %}?by=city&id={{ city.id }}">
+                        <div class="city-item">
+                            <div class="city-item__image">
+                                <img src="{{ city.photo.url }}" alt="">
+                            </div>
+                            <div class="city-item__name">{{ city.name }}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}

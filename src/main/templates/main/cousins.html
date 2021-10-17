@@ -1,0 +1,23 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <main class="main-page">
+        <div class="main-page__container container">
+            <h2 class="title">Выберите тип кухни</h2>
+            <div class="main-page__list grid">
+                {% for cuisine in cuisinetype_list %}
+                    <div class="main-page__col">
+                        <a href="{% url 'main:main' %}?by=cuisine&id={{ cuisine.id }}">
+                            <div class="cousine-item">
+                                <div class="cousine-item__image">
+                                    <img src="{{ cuisine.photo.url }}" alt="">
+                                </div>
+                                <div class="cousine-item__name">{{ cuisine.name }}</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}

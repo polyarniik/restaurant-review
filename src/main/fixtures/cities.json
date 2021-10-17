@@ -1,0 +1,42 @@
+[
+    {
+        "model": "main.City",
+        "pk": 1,
+        "fields": {
+            "name": "Москва",
+            "photo": "/cities/moscow.jpeg"
+        }
+    },
+    {
+        "model": "main.City",
+        "pk": 2,
+        "fields": {
+            "name": "Казань",
+            "photo": "/cities/kazan.jpeg"
+        }
+    },
+    {
+        "model": "main.City",
+        "pk": 3,
+        "fields": {
+            "name": "Санкт-Петербург",
+            "photo": "/cities/spb.jpeg"
+        }
+    },
+    {
+        "model": "main.City",
+        "pk": 4,
+        "fields": {
+            "name": "Новосибирск",
+            "photo": "/cities/novosib.jpeg"
+        }
+    },
+    {
+        "model": "main.City",
+        "pk": 5,
+        "fields": {
+            "name": "Стокгольм",
+            "photo": "/cities/stockholm.jpeg"
+        }
+    }
+]

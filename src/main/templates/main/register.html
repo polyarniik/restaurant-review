@@ -1,0 +1,31 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <main class="auth-page page-center">
+        <form method="post" action="" class="auth-page__form auth-form">
+            {% csrf_token %}
+            <h2 class="auth-form__title">Регистрация</h2>
+            <div class="auth-form__row">
+                <div class="auth-form__input-wrapper">
+                    <input type="email" name="email" id="id_email" maxlength="254" autofocus="" required>
+                    <span>Имя пользователя</span>
+                </div>
+            </div>
+            <div class="auth-form__row">
+                <div class="auth-form__input-wrapper">
+                    <input type="password" name="password1" id="id_password1" autocomplete="new-password" required>
+                    <span>Пароль</span>
+                </div>
+            </div>
+            <div class="auth-form__row">
+                <div class="auth-form__input-wrapper">
+                    <input type="password" name="password2" id="id_password2" autocomplete="new-password" required>
+                    <span>Повторите пароль</span>
+                </div>
+            </div>
+            <div class="auth-form__row">
+                <button type="submit" class="auth-form__button btn">Зарегистрироваться</button>
+            </div>
+        </form>
+    </main>
+{% endblock %}

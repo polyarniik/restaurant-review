@@ -1,0 +1,50 @@
+[
+    {
+        "model": "main.CuisineType",
+        "pk": 1,
+        "fields": {
+            "name": "Французская кухня",
+            "photo": "/cuisines/french.jpeg"
+        }
+    },
+    {
+        "model": "main.CuisineType",
+        "pk": 2,
+        "fields": {
+            "name": "Вьетнамская кухня",
+            "photo": "/cuisines/vietnam.jpeg"
+        }
+    },
+    {
+        "model": "main.CuisineType",
+        "pk": 3,
+        "fields": {
+            "name": "Русская кухня",
+            "photo": "/cuisines/russian.jpeg"
+        }
+    },
+    {
+        "model": "main.CuisineType",
+        "pk": 4,
+        "fields": {
+            "name": "Татарская кухня",
+            "photo": "/cuisines/tatar.jpeg"
+        }
+    },
+    {
+        "model": "main.CuisineType",
+        "pk": 5,
+        "fields": {
+            "name": "Карибская кухня",
+            "photo": "/cuisines/carribean.jpeg"
+        }
+    },
+    {
+        "model": "main.CuisineType",
+        "pk": 6,
+        "fields": {
+            "name": "Авторская кухня",
+            "photo": "/cuisines/author.jpeg"
+        }
+    }
+]

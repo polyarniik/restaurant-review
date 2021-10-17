@@ -1,0 +1,91 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <section class="restaurant">
+        <div class="restaurant__container container">
+            <div class="restaurant__wrapper grid">
+                <div class="restaurant__left">
+                    <div class="restaurant__image">
+                        <img src="{{ restaurant.photo.url }}"
+                             alt="">
+                    </div>
+                    {#                    <div class="restaurant__button-wrapper">#}
+                    {#                        <a href="" class="btn">Посмотреть все фото</a>#}
+                    {#                    </div>#}
+                    <div class="restaurant__button-wrapper">
+                        <a href="{% url 'main:menu' pk=restaurant.pk %}" class="btn">Посмотреть меню</a>
+                    </div>
+                </div>
+                <div class="restaurant__right">
+                    <div class="restaurant__title">{{ restaurant.name }}</div>
+                    <div class="restaurant__row">
+                        <div class="restaurant__key">Сайт</div>
+
+                        <div class="restaurant__value">
+                            <a href="{{ restaurant.site }}">
+                                {{ restaurant.site }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="restaurant__row">
+                        <div class="restaurant__key">Электронная почта</div>
+                        <div class="restaurant__value">{{ restaurant.email }}</div>
+                    </div>
+                    <div class="restaurant__row">
+                        <div class="restaurant__key">Телефон</div>
+                        <div class="restaurant__value">{{ restaurant.phone }}</div>
+                    </div>
+                    <div class="restaurant__row">
+                        <div class="restaurant__key">Адрес</div>
+                        <div class="restaurant__value">{{ restaurant.address }}</div>
+                    </div>
+                    <div class="restaurant__row">
+                        <div class="restaurant__key">Город</div>
+                        <div class="restaurant__value">{{ restaurant.city.name }}</div>
+                    </div>
+                    <div class="restaurant__row">
+                        <div class="restaurant__key">Тип кухни</div>
+                        <div class="restaurant__value">
+                            {{ restaurant.cuisine_type.name }}
+                        </div>
+                    </div>
+{#                    <div class="restaurant__row">#}
+{#                        <div class="restaurant__key">Рейтинг</div>#}
+{#                        <div class="restaurant__value">4.6</div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="reviews__container container">
+            <div class="reviews__header">
+                <h2 class="reviews__title title">Отзывы</h2>
+                <a href="{% url 'main:create_review' pk=restaurant.pk %}" class="btn">Добавить отзыв</a>
+            </div>
+            {% if restaurant.reviews %}
+                <div class="reviews__list">
+                    {% for review in restaurant.reviews.all %}
+                        <div class="reviews__col">
+                            <div class="review-item">
+                                <div class="review-item__header">
+                                    <div class="review-item__author">{{ review.user.profile.full_name }}</div>
+                                    <div class="review-item__rating">{{ review.rating }}</div>
+                                </div>
+                                <div class="review-item__body">
+                                    <div class="review-item__text">
+                                        {{ review.text }}
+                                    </div>
+{#                                    <a href="" class="review-item__more">Подробнее</a>#}
+                                </div>
+                                <div class="review-item__footer">
+                                    <div class="review-item__date">{{ review.date }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

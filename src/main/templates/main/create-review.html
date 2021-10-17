@@ -1,0 +1,23 @@
+{% extends 'main/base/base.html' %}
+{% block content %}
+    {% include 'main/base/nav.html' %}
+    <section class="create-review">
+        <div class="create-review__container container">
+            <form method="post" class="review-form">
+                {% csrf_token %}
+                <div class="review-form__row">
+                    <label for="review-text">
+                        <span>Текст отзыва</span>
+                        <textarea name="text" id="id_text" cols="30" rows="10"></textarea>
+                    </label>
+                </div>
+                <div class="review-form__row ">
+                    <input type="number" class="profile__input" placeholder="Ваша оценка от 1 до 5" min="1" max="5" name="rating" id="id_rating" required="">
+                </div>
+                <div class="review-form__row">
+                    <button type="submit" class="btn">Создать</button>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}

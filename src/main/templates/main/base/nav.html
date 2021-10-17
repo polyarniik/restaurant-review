@@ -1,0 +1,32 @@
+<header class="header">
+    <div class="header__container container">
+        <h2 class="header__title">
+            <a href="/">Restaurants</a>
+        </h2>
+        <nav id="nav" class="header__nav">
+            <ul class="header__links">
+                <li class="header__link">
+                    <a href="{% url 'main:main' %}?all ">Все рестораны</a>
+                </li>
+                <li class="header__link">
+                    <a href="{% url 'main:cities' %}">Города</a>
+                </li>
+                <li class="header__link">
+                    <a href="{% url 'main:cuisines' %}">Тип кухни</a>
+                </li>
+            </ul>
+            <div class="header__user">
+                {% if user.is_authenticated %}
+                    <a href="{%  url 'main:profile' id=user.id %}?all" class="header__user-link">{{ user.email }}</a>
+                    <a href="{% url 'account:logout' %}" class="header__logout btn btn_outline">Выйти</a>
+                {% else %}
+                    <a href="{% url 'account:login' %}" class="header__login-btn btn btn_outline">Вход</a>
+                    <a href="{% url 'account:register' %}" class="btn">Регистрация</a>
+                {% endif %}
+            </div>
+        </nav>
+        <div class="header__burger" id="burger">
+            <span></span>
+        </div>
+    </div>
+</header>

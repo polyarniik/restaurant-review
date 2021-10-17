@@ -1,0 +1,152 @@
+[
+    {
+        "model": "main.Restaurant",
+        "pk": 1,
+        "fields": {
+            "name": "Хочу и Буду",
+            "photo": "/restaurant/hochubudu.jpeg",
+            "city": 2,
+            "cuisine_type": 2,
+            "phone": "222-22-22",
+            "address": "ул. Баумана, 25",
+            "site": "https://hochubudu.ru",
+            "email": "hochubudu@mail.ru",
+            "rewards": []
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 2,
+        "fields": {
+            "name": "Пашмир",
+            "photo": "/restaurant/pashmir.jpeg",
+            "city": 2,
+            "cuisine_type": 4,
+            "phone": "8 (843) 333-33-33",
+            "address": "ул. Хади Такташ, 30",
+            "site": "pashmir.ru",
+            "email": "pahmir@mail.ru",
+            "rewards": [2, 3, 4]
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 3,
+        "fields": {
+            "name": "White Rabbit",
+            "photo": "/restaurant/whiterabbit.jpeg",
+            "city": 1,
+            "cuisine_type": 6,
+            "phone": "333-33-33",
+            "address": "ул. Арбат",
+            "site": "whiterabbit.ru",
+            "email": "whiterabbit@gmail.com",
+            "rewards": [1, 2, 3, 4]
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 4,
+        "fields": {
+            "name": "Amo Cucinare",
+            "photo": "/restaurant/amocucinare.jpeg",
+            "city": 3,
+            "cuisine_type": 5,
+            "phone": "444-44-44",
+            "address": "ул. Петербургская",
+            "site": "amocucinare.ru",
+            "email": "amocucinare@gmail.com",
+            "rewards": [2, 3]
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 5,
+        "fields": {
+            "name": "Новосибирский",
+            "photo": "/restaurant/hochubudu.jpeg",
+            "city": 4,
+            "cuisine_type": 3,
+            "phone": "555-55-55",
+            "address": "ул. Новосибирская",
+            "site": "nov@.ru",
+            "email": "nov@mail.ru",
+            "rewards": []
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 6,
+        "fields": {
+            "name": "Sweden Restaurant",
+            "photo": "/restaurant/",
+            "city": 5,
+            "cuisine_type": 6,
+            "phone": "222-22-22",
+            "address": "ул. Шведская, 11",
+            "site": "sweden.uk",
+            "email": "sweden@gmail.com",
+            "rewards": []
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 7,
+        "fields": {
+            "name": "По-Чесноку",
+            "photo": "/restaurant/pashmir.jpeg",
+            "city": 1,
+            "cuisine_type": 5,
+            "phone": "111-11-11",
+            "address": "ул Московская, 98",
+            "site": "pochesnoku.ru",
+            "email": "pochesnoku@mail.ru",
+            "rewards": []
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 8,
+        "fields": {
+            "name": "Домашняя столовая",
+            "photo": "/restaurant/whiterabbit.jpeg",
+            "city": 4,
+            "cuisine_type": 3,
+            "phone": "111-11-11",
+            "address": "ул Московская, 98",
+            "site": "pochesnoku.ru",
+            "email": "pochesnoku@mail.ru",
+            "rewards": []
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 9,
+        "fields": {
+            "name": "Орбита",
+            "photo": "/restaurant/amocucinare.jpeg",
+            "city": 4,
+            "cuisine_type": 1,
+            "phone": "111-11-11",
+            "address": "ул Московская, 98",
+            "site": "pochesnoku.ru",
+            "email": "pochesnoku@mail.ru",
+            "rewards": []
+        }
+    },
+    {
+        "model": "main.Restaurant",
+        "pk": 10,
+        "fields": {
+            "name": "Марс",
+            "photo": "/restaurant/hochubudu.jpeg",
+            "city": 3,
+            "cuisine_type": 5,
+            "phone": "111-11-11",
+            "address": "ул Московская, 98",
+            "site": "pochesnoku.ru",
+            "email": "pochesnoku@mail.ru",
+            "rewards": []
+        }
+    }
+]
